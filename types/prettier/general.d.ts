@@ -1,0 +1,21 @@
+declare const _default: {
+    printWidth: number;
+    tabWidth: number;
+    useTabs: false;
+    semi: true;
+    singleQuote: false;
+    quoteProps: "preserve";
+    jsxSingleQuote: false;
+    trailingComma: "all";
+    bracketSpacing: true;
+    bracketSameLine: false;
+    arrowParens: "avoid";
+    proseWrap: "preserve";
+    htmlWhitespaceSensitivity: "css";
+    vueIndentScriptAndStyle: false;
+    endOfLine: "lf";
+    embeddedLanguageFormatting: "auto";
+    singleAttributePerLine: false;
+    experimentalOperatorPosition: string;
+};
+export default _default;

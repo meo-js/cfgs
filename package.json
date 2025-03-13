@@ -1,0 +1,47 @@
+{
+  "name": "@meojs/cfgs",
+  "version": "1.0.0",
+  "description": "Meo's development configurations.",
+  "author": {
+    "name": "SmallMain",
+    "email": "smallmain@outlook.com",
+    "url": "https://www.smallmain.com/"
+  },
+  "homepage": "https://smallmain.com/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/meo-js/cfgs"
+  },
+  "bugs": {
+    "url": "https://github.com/meo-js/cfgs"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "index.js",
+  "types": "./types/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "npx tsc index.js --declaration --emitDeclarationOnly --allowJs --lib dom,esnext --skipLibCheck --outDir ./types",
+    "dev": "pnpm run build --watch",
+    "clean": "rimraf ./dist && rimraf ./temp",
+    "eslint:inspect": "npx @eslint/config-inspector --config eslint/test.js"
+  },
+  "peerDependencies": {
+    "eslint": "^9.20.0",
+    "prettier": "^3.5.0",
+    "typescript": "5.7.x"
+  },
+  "dependencies": {
+    "@eslint-community/eslint-plugin-eslint-comments": "^4.4.1",
+    "@eslint/compat": "^1.2.6",
+    "@eslint/js": "^9.20.0",
+    "@html-eslint/eslint-plugin": "^0.34.0",
+    "@html-eslint/parser": "^0.34.0",
+    "eslint-plugin-jsdoc": "^50.6.3",
+    "eslint-plugin-n": "^17.15.1",
+    "eslint-plugin-security": "^3.0.1",
+    "typescript-eslint": "^8.23.0"
+  }
+}

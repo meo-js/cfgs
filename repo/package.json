@@ -1,0 +1,25 @@
+{
+  "name": "name",
+  "version": "1.0.0",
+  "description": "Description.",
+  "author": {
+    "name": "SmallMain",
+    "email": "smallmain@outlook.com",
+    "url": "https://www.smallmain.com/"
+  },
+  "homepage": "https://smallmain.com/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/meo-js/cfgs"
+  },
+  "bugs": {
+    "url": "https://github.com/meo-js/cfgs"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "index.js",
+  "types": "./types/index.d.ts",
+  "type": "module"
+}
