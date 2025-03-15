@@ -96,7 +96,8 @@ To get started contributing to the project, see the [Contributing Guide](./CONTR
 
 ## Contributing
 
-运行 `npm run build` 进行构建，运行 `npm version patch && npm publish` 推送新版本。
+- 执行 `npm run build` 进行构建。
+- 执行 `npm version patch && npm publish` 推送新版本。
 
 ## License
 
