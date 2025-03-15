@@ -9,7 +9,6 @@
         "./base/language-and-environment.json",
         "./base/output-format.json",
         "./base/type-check.json",
-        "./base/incremental.json",
         "./base/modules.json",
     ],
 }
