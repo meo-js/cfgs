@@ -17,11 +17,11 @@ import { web as webCfg } from "./web.js";
 /**
  * @typedef Options
  *
- * @property {boolean | string} [gitignore] 是否添加 `.gitignore` 忽略，默认使用 `cwd()` 查找 `.gitignore` 文件路径。
+ * @property {boolean | string} [gitignore] 是否添加 `.gitignore` 忽略，默认使用 `cwd()` 查找 `.gitignore` 文件路径
  * @property {boolean} [ignoreConfigFiles] 忽略所有 `*.config` 配置文件，比如 `eslint.config.js`，默认 `true`
  * @property {"none" | "loose" | "strict"} [jsdoc] JSDoc 检查级别，默认 `loose`
- * @property {"none" | "loose" | "strict"} [nodejs] 包括 nodejs 相关规则，默认 `strict`
- * @property {boolean} [web] 包括 web 相关规则，默认 `true`
+ * @property {"none" | "loose" | "strict"} [nodejs] 包括 NodeJS 相关规则，默认 `strict`
+ * @property {boolean} [web] 包括 Web 相关规则，默认 `true`
  * @property {string[]} [jsdocTags] 额外允许的 JSDoc 标签
  * @property {boolean} [ctix] 是否兼容 `ctix`，默认 `false`
  * @property {boolean} [reactive] 是否兼容响应式库，默认 `true`

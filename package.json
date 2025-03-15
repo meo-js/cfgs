@@ -23,9 +23,8 @@
   "types": "./types/index.d.ts",
   "type": "module",
   "scripts": {
-    "build": "npx tsc index.js --declaration --emitDeclarationOnly --allowJs --lib dom,esnext --skipLibCheck --outDir ./types",
+    "build": "rimraf ./types && npx tsc index.js --declaration --emitDeclarationOnly --allowJs --lib dom,esnext --skipLibCheck --outDir ./types",
     "dev": "pnpm run build --watch",
-    "clean": "rimraf ./dist && rimraf ./temp",
     "eslint:inspect": "npx @eslint/config-inspector --config eslint/test.js"
   },
   "peerDependencies": {
@@ -45,6 +44,7 @@
     "typescript-eslint": "^8.23.0"
   },
   "devDependencies": {
-    "@types/node": "^22.13.10"
+    "@types/node": "^22.13.10",
+    "rimraf": "^6.0.1"
   }
 }
