@@ -15,5 +15,13 @@ export function nodejs(level) {
     return defineConfig(
         node.configs["flat/recommended"],
         level === "strict" ? nodeSecurity.configs.recommended : {},
+        {
+            name: "custom nodejs rules",
+            rules: {
+                // 以下规则误报且有 TypeScript 原生支持
+                "n/no-missing-import": "off",
+                "n/no-missing-require": "off",
+            },
+        }
     );
 }
