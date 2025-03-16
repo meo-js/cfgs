@@ -7,7 +7,7 @@
 </h1>
 
 <p align="center">
-Meo's development configurations.
+MeoJS 使用的开发配置。
 </p>
 
 <!-- <br>
@@ -19,11 +19,11 @@ Meo's development configurations.
 
 <br>
 <p align="center">
-<span>English</span> |
-<a href="./README_zh-CN.md">简体中文</a>
+<a href="./README.md">English</a> |
+<span>简体中文</span>
 </p>
 
-## Introduction
+## 简介
 
 ```bash
 npm i -D @meojs/cfgs
@@ -40,10 +40,10 @@ npm i -D @meojs/cfgs
 }
 ```
 
-- `@meojs/cfgs/ts/base.json` - Configuration with rules only
-- `@meojs/cfgs/ts/general.json` - Common configuration for ES modules
-- `@meojs/cfgs/ts/cocos.json` - Configuration for Cocos Creator projects
-- `@meojs/cfgs/ts/node.json` - Configuration for NodeJS projects
+- `@meojs/cfgs/ts/base.json` - 仅有规则的配置
+- `@meojs/cfgs/ts/general.json` - ES 模块通用配置
+- `@meojs/cfgs/ts/cocos.json` - Cocos Creator 项目配置
+- `@meojs/cfgs/ts/node.json` - NodeJS 项目配置
 
 ### ESLint Config
 
@@ -51,21 +51,21 @@ npm i -D @meojs/cfgs
 import { eslint } from "@xenon.js/configs";
 
 export default eslint.config({
-    // Whether to add `.gitignore` ignore, by default uses `cwd()` to find the `.gitignore` file path
+    // 是否添加 `.gitignore` 忽略，默认使用 `cwd()` 查找 `.gitignore` 文件路径
     gitignore?: boolean | string,
-    // Ignore all `*.config` configuration files, such as `eslint.config.js`, default is `true`
+    // 忽略所有 `*.config` 配置文件，比如 `eslint.config.js`，默认 `true`
     ignoreConfigFiles?: boolean,
-    // JSDoc inspection level, default is `loose`
+    // JSDoc 检查级别，默认 `loose`
     jsdoc?: "none" | "loose" | "strict",
-    // Include NodeJS related rules, default is `strict`
+    // 包括 NodeJS 相关规则，默认 `strict`
     nodejs?: "none" | "loose" | "strict",
-    // Include Web related rules, default is `true`
+    // 包括 Web 相关规则，默认 `true`
     web?: boolean,
-    // Additional allowed JSDoc tags
+    // 额外允许的 JSDoc 标签
     jsdocTags?: string[],
-    // Whether to be compatible with `ctix`, default is `false`
+    // 是否兼容 `ctix`，默认 `false`
     ctix?: boolean,
-    // Whether to be compatible with reactive libraries, default is `true`
+    // 是否兼容响应式库，默认 `true`
     reactive?: boolean,
 });
 ```
@@ -80,11 +80,11 @@ export default prettier.config;
 
 ### Editor Config
 
-Please manually copy the files from the `editorconfig` directory.
+请手动复制 `editorconfig` 目录内的文件。
 
 ### Repo Template
 
-Please manually copy the files from the `repo` directory.
+请手动复制 `repo` 目录内的文件。
 
 <!-- ## Documentation
 
@@ -94,11 +94,11 @@ Read the [documentation](https://unocss.dev/) for more details. -->
 
 To get started contributing to the project, see the [Contributing Guide](./CONTRIBUTING.md). -->
 
-## Contributing
+## 贡献
 
-- Run `npm run build` to build the project.
-- Run `npm version patch && npm publish` to push a new version.
+- 执行 `npm run build` 进行构建。
+- 执行 `npm version patch && npm publish` 推送新版本。
 
-## License
+## 许可证
 
 [MIT @ SmallMain](./LICENSE)
