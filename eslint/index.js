@@ -6,7 +6,7 @@ import { resolve } from "path";
 import { cwd } from "process";
 import {
     config as defineConfig,
-    configs as tsConfigs
+    configs as tsConfigs,
 } from "typescript-eslint";
 import { scriptExt } from "./glob.js";
 import { ignore } from "./ignore-utils.js";
@@ -62,14 +62,14 @@ export function config(opts = {}) {
         },
         linterOptions: {
             reportUnusedDisableDirectives: "error",
+            reportUnusedInlineConfigs: "error",
         },
     });
 
     const ignoreGitignore = () => {
         if (gitignore !== false) {
-            const path = gitignore === true
-                ? resolve(cwd(), ".gitignore")
-                : gitignore;
+            const path =
+                gitignore === true ? resolve(cwd(), ".gitignore") : gitignore;
             return ignore(".gitignore", path);
         } else {
             return [];
@@ -257,8 +257,7 @@ export function config(opts = {}) {
             ],
 
             // 如果禁用则必须进行注释
-            "@eslint-community/eslint-comments/require-description":
-                "error",
+            "@eslint-community/eslint-comments/require-description": "error",
         },
     });
 
@@ -278,6 +277,6 @@ export function config(opts = {}) {
         ...customRules,
         ...jsdocCfg(jsdoc, reactive, ctix, jsdocTags),
         ...nodejsCfg(nodejs),
-        ...webCfg(web),
+        ...webCfg(web)
     );
 }
