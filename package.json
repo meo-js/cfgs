@@ -1,20 +1,16 @@
 {
   "name": "@meojs/cfgs",
   "version": "2.0.3",
+  "packageManager": "npm@10.9.0",
   "description": "Meo's development configurations.",
   "author": {
     "name": "SmallMain",
     "email": "smallmain@outlook.com",
     "url": "https://www.smallmain.com/"
   },
-  "homepage": "https://smallmain.com/",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/meo-js/cfgs"
-  },
-  "bugs": {
-    "url": "https://github.com/meo-js/cfgs/issues"
-  },
+  "homepage": "https://www.smallmain.com/",
+  "repository": "github:meo-js/cfgs",
+  "bugs": "https://github.com/meo-js/cfgs/issues",
   "license": "MIT",
   "publishConfig": {
     "access": "public"

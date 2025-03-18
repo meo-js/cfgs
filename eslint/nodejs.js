@@ -22,6 +22,13 @@ export function nodejs(level) {
                 "n/no-missing-import": "off",
                 "n/no-missing-require": "off",
             },
-        }
+        },
+        {
+            name: "custom nodejs security rules",
+            rules: {
+                // 没必要打开
+                "security/detect-object-injection": "off",
+            },
+        },
     );
 }
