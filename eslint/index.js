@@ -162,6 +162,14 @@ export function config(opts = {}) {
                 { ignoreRestArgs: true },
             ],
 
+            // 在推荐规则内，但最小注释长度太长
+            "@typescript-eslint/ban-ts-comment": [
+                "error",
+                {
+                    minimumDescriptionLength: 2,
+                },
+            ],
+
             // 在推荐规则内，但需允许传入数值
             "@typescript-eslint/restrict-template-expressions": [
                 "error",
