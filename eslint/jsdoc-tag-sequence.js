@@ -105,15 +105,12 @@ export default [
 
     // Core function/object info
     {
-        tags: [
-            "param",
-            "arg",
-            "argument",
-            "prop",
-            "property",
-            "return",
-            "returns",
-        ],
+        tags: ["param", "arg", "argument", "prop", "property"],
+    },
+
+    // Core function/object info
+    {
+        tags: ["return", "returns"],
     },
 
     // Important behavior details
