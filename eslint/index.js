@@ -123,6 +123,9 @@ export function config(opts = {}) {
             // 由于其它规则要求必须处理 Promise，当显式不进行处理时则会使用 void
             "no-void": "off",
 
+            // 生成器函数不一定必须有 yield，可能是预留
+            "require-yield": "off",
+
             // 有时候保留未使用的东西有用处，所以禁用该规则
             "no-unused-vars": "off",
             "@typescript-eslint/no-unused-vars": "off",
@@ -277,6 +280,6 @@ export function config(opts = {}) {
         ...customRules,
         ...jsdocCfg(jsdoc, reactive, ctix, jsdocTags),
         ...nodejsCfg(nodejs),
-        ...webCfg(web)
+        ...webCfg(web),
     );
 }

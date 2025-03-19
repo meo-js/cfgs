@@ -146,17 +146,18 @@ export function jsdoc(level, reactive, ctix, jsdocTags) {
                     "any",
                     {
                         startLines: 1,
-                        tags: {
-                            example: {
-                                lines: 2,
-                            },
-                        },
                     },
                 ],
                 "jsdoc/sort-tags": [
                     "warn",
                     {
                         tagSequence: jsdocTagSequence,
+                    },
+                ],
+                "jsdoc/require-yields-check": [
+                    "warn",
+                    {
+                        checkGeneratorsOnly: true,
                     },
                 ],
             },

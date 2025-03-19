@@ -105,12 +105,19 @@ export default [
 
     // Core function/object info
     {
-        tags: ["param", "arg", "argument", "prop", "property"],
-    },
-
-    // Core function/object info
-    {
-        tags: ["return", "returns"],
+        tags: [
+            "param",
+            "arg",
+            "argument",
+            "prop",
+            "property",
+            "return",
+            "returns",
+            "throws",
+            "exception",
+            "yield",
+            "yields",
+        ],
     },
 
     // Important behavior details
@@ -123,10 +130,7 @@ export default [
             "enum",
             "augments",
             "extends",
-            "throws",
-            "exception",
-            "yield",
-            "yields",
+
             "event",
             "fires",
             "emits",
