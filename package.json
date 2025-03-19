@@ -1,6 +1,6 @@
 {
   "name": "@meojs/cfgs",
-  "version": "2.0.7",
+  "version": "2.0.8",
   "packageManager": "npm@10.9.0",
   "description": "Meo's development configurations.",
   "author": {
