@@ -26,6 +26,7 @@ export function jsdoc(level, reactive, ctix, jsdocTags) {
                   "ctix-declaration",
               ]
             : [],
+        ["__NO_SIDE_EFFECTS__", "__PURE__"],
     );
 
     const looseRules = () => {
