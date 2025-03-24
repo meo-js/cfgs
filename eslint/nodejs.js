@@ -21,6 +21,14 @@ export function nodejs(level) {
                 // 以下规则误报且有 TypeScript 原生支持
                 "n/no-missing-import": "off",
                 "n/no-missing-require": "off",
+
+                // 不报告实验性功能
+                "n/no-unsupported-features/node-builtins": [
+                    "error",
+                    {
+                        "allowExperimental": true,
+                    },
+                ],
             },
         },
         {
