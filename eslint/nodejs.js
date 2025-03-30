@@ -36,6 +36,7 @@ export function nodejs(level) {
             rules: {
                 // 没必要打开
                 "security/detect-object-injection": "off",
+                "security/detect-non-literal-fs-filename": "off",
             },
         },
     );
