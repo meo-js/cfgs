@@ -29,6 +29,14 @@ export function nodejs(level) {
                         "allowExperimental": true,
                     },
                 ],
+
+                // 不报告由 @meojs/utils 进行 Polyfill 的功能
+                "n/no-unsupported-features/es-syntax": [
+                    "warn",
+                    {
+                        ignores: ["promise-withresolvers"],
+                    },
+                ],
             },
         },
         {
