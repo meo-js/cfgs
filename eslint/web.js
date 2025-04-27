@@ -18,7 +18,7 @@ export function web(enable) {
     return defineConfig({
         name: "web recommended rules",
         files: ["**/*.html"],
+        // @ts-expect-error 误报没有该配置
         ...html.configs["flat/recommended"],
     });
 }
-

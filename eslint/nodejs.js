@@ -45,6 +45,7 @@ export function nodejs(level) {
                 // 没必要打开
                 "security/detect-object-injection": "off",
                 "security/detect-non-literal-fs-filename": "off",
+                "security/detect-unsafe-regex": "off",
             },
         },
     );

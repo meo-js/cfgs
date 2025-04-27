@@ -145,6 +145,7 @@ export function config(opts = {}) {
             // 在推荐规则内，但自认为没有必要启用的规则
             "@typescript-eslint/dot-notation": "off",
             "@typescript-eslint/no-inferrable-types": "off",
+            "@typescript-eslint/prefer-for-of": "off",
             "@typescript-eslint/prefer-literal-enum-member": "off",
             "@typescript-eslint/no-unnecessary-type-parameters": "off",
             "@typescript-eslint/no-unnecessary-type-arguments": "off",
@@ -155,12 +156,6 @@ export function config(opts = {}) {
             "@typescript-eslint/no-unsafe-declaration-merging": "off",
             "@typescript-eslint/unified-signatures": "off",
             "@typescript-eslint/prefer-promise-reject-errors": "off",
-
-            // 在推荐规则内，但需允许 (...args: any[]) 用法
-            "@typescript-eslint/no-explicit-any": [
-                "error",
-                { ignoreRestArgs: true },
-            ],
 
             // 在推荐规则内，但最小注释长度太长
             "@typescript-eslint/ban-ts-comment": [
