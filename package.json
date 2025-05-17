@@ -26,7 +26,9 @@
     "dev": "npm run build --watch",
     "eslint:inspect": "npx @eslint/config-inspector --config eslint/test.js",
     "prepack": "npm run build",
-    "publish:patch": "npm version patch && npm publish"
+    "publish:patch": "npm version patch && npm publish",
+    "publish:minor": "npm version minor && npm publish",
+    "publish:major": "npm version major && npm publish"
   },
   "peerDependencies": {
     "eslint": "^9.22.0",
