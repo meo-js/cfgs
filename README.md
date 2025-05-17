@@ -34,9 +34,7 @@ npm i -D @meojs/cfgs
 ```jsonc
 {
     "extends": "@meojs/cfgs/ts/general.json",
-    "include": [
-        "src"
-    ],
+    "include": ["src"],
 }
 ```
 
@@ -97,7 +95,7 @@ To get started contributing to the project, see the [Contributing Guide](./CONTR
 ## Contributing
 
 - Run `npm run build` to build the project.
-- Run `npm version patch && npm publish` to push a new version.
+- Run `npm publish` to push a new version.
 
 ## License
 
