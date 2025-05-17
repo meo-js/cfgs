@@ -25,7 +25,7 @@
     "build": "rimraf ./types && npx tsc index.js --declaration --emitDeclarationOnly --allowJs --lib dom,esnext --skipLibCheck --outDir ./types",
     "dev": "npm run build --watch",
     "eslint:inspect": "npx @eslint/config-inspector --config eslint/test.js",
-    "publish": "npm run build",
+    "prepack": "npm run build",
     "publish:patch": "npm version patch && npm publish"
   },
   "peerDependencies": {
