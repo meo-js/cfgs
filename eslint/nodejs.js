@@ -46,6 +46,7 @@ export function nodejs(level) {
                 "security/detect-object-injection": "off",
                 "security/detect-non-literal-fs-filename": "off",
                 "security/detect-unsafe-regex": "off",
+                "security/detect-non-literal-regexp": "off",
             },
         },
     );

@@ -23,8 +23,9 @@
   "type": "module",
   "scripts": {
     "build": "rimraf ./types && npx tsc index.js --declaration --emitDeclarationOnly --allowJs --lib dom,esnext --skipLibCheck --outDir ./types",
-    "dev": "pnpm run build --watch",
-    "eslint:inspect": "npx @eslint/config-inspector --config eslint/test.js"
+    "dev": "npm run build --watch",
+    "eslint:inspect": "npx @eslint/config-inspector --config eslint/test.js",
+    "publish": "npm version patch && npm publish"
   },
   "peerDependencies": {
     "eslint": "^9.22.0",
