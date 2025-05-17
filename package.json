@@ -26,7 +26,7 @@
     "dev": "npm run build --watch",
     "eslint:inspect": "npx @eslint/config-inspector --config eslint/test.js",
     "publish": "npm run build",
-    "publish:patch": "npm version patch"
+    "publish:patch": "npm version patch && npm publish"
   },
   "peerDependencies": {
     "eslint": "^9.22.0",
