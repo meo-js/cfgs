@@ -7,7 +7,6 @@
  * @property {"none" | "loose" | "strict"} [nodejs] 包括 NodeJS 相关规则，默认 `strict`
  * @property {boolean} [web] 包括 Web 相关规则，默认 `true`
  * @property {string[]} [jsdocTags] 额外允许的 JSDoc 标签
- * @property {boolean} [ctix] 是否兼容 `ctix`，默认 `false`
  * @property {boolean} [reactive] 是否兼容响应式库，默认 `true`
  */
 /**
@@ -40,10 +39,6 @@ export type Options = {
      * 额外允许的 JSDoc 标签
      */
     jsdocTags?: string[];
-    /**
-     * 是否兼容 `ctix`，默认 `false`
-     */
-    ctix?: boolean;
     /**
      * 是否兼容响应式库，默认 `true`
      */

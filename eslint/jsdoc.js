@@ -7,25 +7,16 @@ import jsdocTagSequence from "./jsdoc-tag-sequence.js";
 /**
  * @param {"none" | "loose" | "strict"} level 检查级别
  * @param {boolean} reactive 是否兼容响应式库标记
- * @param {boolean} ctix 是否兼容 `ctix`，默认 `false`
  * @param {string[]} jsdocTags 额外允许的 JSDoc 标签
  * @returns {ConfigArray}
  */
-export function jsdoc(level, reactive, ctix, jsdocTags) {
+export function jsdoc(level, reactive, jsdocTags) {
     if (level === "none") {
         return [];
     }
 
     const definedTags = jsdocTags.concat(
         reactive ? ["val", "reactive", "shallow", "computed"] : [],
-        ctix
-            ? [
-                  "ctix-exclude",
-                  "ctix-generation-style",
-                  "ctix-exclude-next",
-                  "ctix-declaration",
-              ]
-            : [],
         ["__NO_SIDE_EFFECTS__", "__PURE__"],
     );
 

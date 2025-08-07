@@ -7,7 +7,7 @@
 </h1>
 
 <p align="center">
-MeoJS 使用的开发配置。
+Meo 团队使用的开发配置。
 </p>
 
 <!-- <br>
@@ -61,8 +61,6 @@ export default eslint.config({
     web?: boolean,
     // 额外允许的 JSDoc 标签
     jsdocTags?: string[],
-    // 是否兼容 `ctix`，默认 `false`
-    ctix?: boolean,
     // 是否兼容响应式库，默认 `true`
     reactive?: boolean,
 });

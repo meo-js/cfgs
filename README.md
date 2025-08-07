@@ -61,8 +61,6 @@ export default eslint.config({
     web?: boolean,
     // Additional allowed JSDoc tags
     jsdocTags?: string[],
-    // Whether to be compatible with `ctix`, default is `false`
-    ctix?: boolean,
     // Whether to be compatible with reactive libraries, default is `true`
     reactive?: boolean,
 });
