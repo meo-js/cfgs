@@ -4,22 +4,17 @@
  * @type {import('prettier').Config}
  */
 export const config = {
-    printWidth: 80,
-    tabWidth: 4,
-    useTabs: false,
+    experimentalTernaries: false,
+    experimentalOperatorPosition: "start",
     semi: true,
-    singleQuote: false,
+    singleQuote: true,
     quoteProps: "preserve",
-    jsxSingleQuote: false,
     trailingComma: "all",
     bracketSpacing: true,
+    objectWrap: "preserve",
     bracketSameLine: false,
-    arrowParens: "avoid",
+    arrowParens: "always",
     proseWrap: "preserve",
-    htmlWhitespaceSensitivity: "css",
-    vueIndentScriptAndStyle: false,
-    endOfLine: "lf",
     embeddedLanguageFormatting: "auto",
     singleAttributePerLine: false,
-    experimentalOperatorPosition: "start",
 };
