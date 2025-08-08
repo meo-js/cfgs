@@ -1,3 +1,5 @@
+import * as jsdoc from "prettier-plugin-jsdoc";
+
 /**
  * 基础配置
  *
@@ -17,4 +19,6 @@ export const config = {
     proseWrap: "preserve",
     embeddedLanguageFormatting: "auto",
     singleAttributePerLine: false,
+    // @ts-ignore
+    plugins: [jsdoc],
 };
