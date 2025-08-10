@@ -8,7 +8,7 @@
  * @param {Options} opts
  * @returns {import('prettier').Config}
  */
-export function config(opts) {
+export function config(opts = {}) {
   const { tailwindcss } = opts;
 
   /** @type {import('prettier').Config} */
