@@ -1,6 +1,6 @@
 /** @import { ConfigArray } from "typescript-eslint" */
-import html from "@html-eslint/eslint-plugin";
-import { defineConfig } from "eslint/config";
+import html from '@html-eslint/eslint-plugin';
+import { defineConfig } from 'eslint/config';
 
 /**
  * 针对 Web 的配置
@@ -11,14 +11,14 @@ import { defineConfig } from "eslint/config";
  * @returns {ConfigArray}
  */
 export function web(enable) {
-    if (!enable) {
-        return [];
-    }
+  if (!enable) {
+    return [];
+  }
 
-    return defineConfig({
-        name: "web recommended rules",
-        files: ["**/*.html"],
-        // @ts-expect-error 误报没有该配置
-        ...html.configs["flat/recommended"],
-    });
+  return defineConfig({
+    name: 'web recommended rules',
+    files: ['**/*.html'],
+    // @ts-expect-error 误报没有该配置
+    ...html.configs['flat/recommended'],
+  });
 }

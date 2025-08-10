@@ -33,8 +33,8 @@ npm i -D @meojs/cfgs
 
 ```jsonc
 {
-    "extends": "@meojs/cfgs/ts/general.json",
-    "include": ["src"],
+  "extends": "@meojs/cfgs/ts/general.json",
+  "include": ["src"],
 }
 ```
 
@@ -49,27 +49,27 @@ npm i -D @meojs/cfgs
 import { eslint } from "@xenon.js/configs";
 
 export default eslint.config({
-    // Whether to add `.gitignore` ignore, by default uses `cwd()` to find the `.gitignore` file path
-    gitignore?: boolean | string,
-    // Ignore all `*.config` configuration files, such as `eslint.config.js`, default is `true`
-    ignoreConfigFiles?: boolean,
-    // JSDoc inspection level, default is `loose`
-    jsdoc?: "none" | "loose" | "strict",
-    // Include NodeJS related rules, default is `strict`
-    nodejs?: "none" | "loose" | "strict",
-    // Include Web related rules, default is `true`
-    web?: boolean,
-    // Additional allowed JSDoc tags
-    jsdocTags?: string[],
-    // Whether to be compatible with reactive libraries, default is `true`
-    reactive?: boolean,
+  // Whether to add `.gitignore` ignore, by default uses `cwd()` to find the `.gitignore` file path
+  gitignore?: boolean | string,
+  // Ignore all `*.config` configuration files, such as `eslint.config.js`, default is `true`
+  ignoreConfigFiles?: boolean,
+  // JSDoc inspection level, default is `loose`
+  jsdoc?: "none" | "loose" | "strict",
+  // Include NodeJS related rules, default is `strict`
+  nodejs?: "none" | "loose" | "strict",
+  // Include Web related rules, default is `true`
+  web?: boolean,
+  // Additional allowed JSDoc tags
+  jsdocTags?: string[],
+  // Whether to be compatible with reactive libraries, default is `true`
+  reactive?: boolean,
 });
 ```
 
 ### Prettier Config
 
 ```js
-import { prettier } from "@xenon.js/configs";
+import { prettier } from '@xenon.js/configs';
 
 export default prettier.config;
 ```

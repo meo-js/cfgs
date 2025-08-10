@@ -1,32 +1,14 @@
 {
   "[javascript][typescript][javascriptreact][typescriptreact]": {
-    "editor.codeActionsOnSave": {
-      "source.fixAll": "explicit"
-    },
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[json][jsonc][jsonl][snippets][yaml]": {
-    "editor.codeActionsOnSave": {
-      "source.fixAll": "explicit"
-    },
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[html][css][scss][less]": {
-    "editor.codeActionsOnSave": {
-      "source.fixAll": "explicit"
-    },
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[vue]": {
-    "editor.codeActionsOnSave": {
-      "source.fixAll": "explicit"
-    },
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[markdown][mdx]": {
-    "editor.codeActionsOnSave": {
-      "source.fixAll": "explicit"
-    },
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
 }

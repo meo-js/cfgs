@@ -1,7 +1,7 @@
-import { convertIgnorePatternToMinimatch } from "@eslint/compat";
-import { defineConfig } from "eslint/config";
-import { existsSync, readFileSync } from "fs";
-import { isAbsolute } from "path";
+import { convertIgnorePatternToMinimatch } from '@eslint/compat';
+import { defineConfig } from 'eslint/config';
+import { existsSync, readFileSync } from 'fs';
+import { isAbsolute } from 'path';
 
 /** @import { Linter } from "eslint" */
 
@@ -14,25 +14,25 @@ import { isAbsolute } from "path";
  * @throws {Error} If the ignore file path is not an absolute path.
  */
 export function ignore(name, filePath) {
-    if (!isAbsolute(filePath)) {
-        throw new Error("The ignore file location must be an absolute path.");
-    }
+  if (!isAbsolute(filePath)) {
+    throw new Error('The ignore file location must be an absolute path.');
+  }
 
-    if (!existsSync(filePath)) {
-        return [];
-    }
+  if (!existsSync(filePath)) {
+    return [];
+  }
 
-    const ignoreFile = readFileSync(filePath, "utf8");
-    const lines = ignoreFile.split(/\r?\n/u);
+  const ignoreFile = readFileSync(filePath, 'utf8');
+  const lines = ignoreFile.split(/\r?\n/u);
 
-    return defineConfig({
-        name,
-        ignores: lines
-            .map(line => line.trim())
-            .filter(line => line && !line.startsWith("#"))
-            // no '/' then no dir
-            .map(v => (v.at(-1) === "/" ? [v] : [v, v + "/"]))
-            .flat(1)
-            .map(convertIgnorePatternToMinimatch),
-    });
+  return defineConfig({
+    name,
+    ignores: lines
+      .map(line => line.trim())
+      .filter(line => line && !line.startsWith('#'))
+      // no '/' then no dir
+      .map(v => (v.at(-1) === '/' ? [v] : [v, v + '/']))
+      .flat(1)
+      .map(convertIgnorePatternToMinimatch),
+  });
 }

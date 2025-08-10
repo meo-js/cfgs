@@ -1,8 +1,8 @@
 {
-    "$schema": "https://json.schemastore.org/tsconfig",
-    "compilerOptions": {
-        "sourceMap": true,
-        "declaration": true,
-        "declarationMap": true,
-    },
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+  },
 }

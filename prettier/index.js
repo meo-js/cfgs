@@ -13,7 +13,7 @@ export const config = {
   bracketSpacing: true,
   objectWrap: 'preserve',
   bracketSameLine: false,
-  arrowParens: 'always',
+  arrowParens: 'avoid',
   proseWrap: 'preserve',
   embeddedLanguageFormatting: 'auto',
   singleAttributePerLine: false,
