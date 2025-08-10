@@ -38,10 +38,10 @@ npm i -D @meojs/cfgs
 }
 ```
 
-- `@meojs/cfgs/ts/base.json` - 仅有规则的配置
-- `@meojs/cfgs/ts/general.json` - ES 模块通用配置
-- `@meojs/cfgs/ts/cocos.json` - Cocos Creator 项目配置
-- `@meojs/cfgs/ts/node.json` - NodeJS 项目配置
+- `@meojs/cfgs/ts/base.json` - 仅有规则的配置。
+- `@meojs/cfgs/ts/general.json` - ES 模块通用配置。
+- `@meojs/cfgs/ts/cocos.json` - Cocos Creator 项目配置。
+- `@meojs/cfgs/ts/node.json` - NodeJS 项目配置。
 
 ### ESLint Config
 
@@ -49,19 +49,19 @@ npm i -D @meojs/cfgs
 import { eslint } from "@xenon.js/configs";
 
 export default eslint.config({
-  // 是否添加 `.gitignore` 忽略，默认使用 `cwd()` 查找 `.gitignore` 文件路径
+  // 是否添加 `.gitignore` 忽略，默认使用 `cwd()` 查找 `.gitignore` 文件路径。
   gitignore?: boolean | string,
-  // 忽略所有 `*.config` 配置文件，比如 `eslint.config.js`，默认 `true`
+  // 忽略所有 `*.config` 配置文件，比如 `eslint.config.js`，默认 `true`。
   ignoreConfigFiles?: boolean,
-  // JSDoc 检查级别，默认 `loose`
+  // JSDoc 检查级别，默认 `loose`。
   jsdoc?: "none" | "loose" | "strict",
-  // 包括 NodeJS 相关规则，默认 `strict`
+  // 包括 NodeJS 相关规则，默认 `strict`。
   nodejs?: "none" | "loose" | "strict",
-  // 包括 Web 相关规则，默认 `true`
+  // 包括 Web 相关规则，默认 `true`。
   web?: boolean,
-  // 额外允许的 JSDoc 标签
+  // 额外允许的 JSDoc 标签。
   jsdocTags?: string[],
-  // 是否兼容响应式库，默认 `true`
+  // 是否兼容响应式库，默认 `true`。
   reactive?: boolean,
 });
 ```
@@ -71,7 +71,10 @@ export default eslint.config({
 ```js
 import { prettier } from '@xenon.js/configs';
 
-export default prettier.config;
+export default prettier.config({
+  // 是否使用 Tailwind CSS，默认 `false`。
+  tailwindcss?: boolean;
+});
 ```
 
 ### Editor Config

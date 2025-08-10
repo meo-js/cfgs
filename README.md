@@ -38,10 +38,10 @@ npm i -D @meojs/cfgs
 }
 ```
 
-- `@meojs/cfgs/ts/base.json` - Configuration with rules only
-- `@meojs/cfgs/ts/general.json` - Common configuration for ES modules
-- `@meojs/cfgs/ts/cocos.json` - Configuration for Cocos Creator projects
-- `@meojs/cfgs/ts/node.json` - Configuration for NodeJS projects
+- `@meojs/cfgs/ts/base.json` - Configuration with rules only.
+- `@meojs/cfgs/ts/general.json` - Common configuration for ES modules.
+- `@meojs/cfgs/ts/cocos.json` - Configuration for Cocos Creator projects.
+- `@meojs/cfgs/ts/node.json` - Configuration for NodeJS projects.
 
 ### ESLint Config
 
@@ -49,19 +49,19 @@ npm i -D @meojs/cfgs
 import { eslint } from "@xenon.js/configs";
 
 export default eslint.config({
-  // Whether to add `.gitignore` ignore, by default uses `cwd()` to find the `.gitignore` file path
+  // Whether to add `.gitignore` ignore, by default uses `cwd()` to find the `.gitignore` file path.
   gitignore?: boolean | string,
-  // Ignore all `*.config` configuration files, such as `eslint.config.js`, default is `true`
+  // Ignore all `*.config` configuration files, such as `eslint.config.js`, default is `true`.
   ignoreConfigFiles?: boolean,
-  // JSDoc inspection level, default is `loose`
+  // JSDoc inspection level, default is `loose`.
   jsdoc?: "none" | "loose" | "strict",
-  // Include NodeJS related rules, default is `strict`
+  // Include NodeJS related rules, default is `strict`.
   nodejs?: "none" | "loose" | "strict",
-  // Include Web related rules, default is `true`
+  // Include Web related rules, default is `true`.
   web?: boolean,
-  // Additional allowed JSDoc tags
+  // Additional allowed JSDoc tags.
   jsdocTags?: string[],
-  // Whether to be compatible with reactive libraries, default is `true`
+  // Whether to be compatible with reactive libraries, default is `true`.
   reactive?: boolean,
 });
 ```
@@ -71,7 +71,10 @@ export default eslint.config({
 ```js
 import { prettier } from '@xenon.js/configs';
 
-export default prettier.config;
+export default prettier.config({
+  // Whether to use Tailwind CSS, default `false`.
+  tailwindcss?: boolean;
+});
 ```
 
 ### Editor Config
