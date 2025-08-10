@@ -55,6 +55,13 @@ export function jsdoc(level, reactive, jsdocTags) {
       name: 'custom jsdoc rules',
       files: [`**/*.${scriptExt}`],
       rules: {
+        'jsdoc/check-line-alignment': [
+          'warn',
+          'never',
+          {
+            disableWrapIndent: true,
+          },
+        ],
         'jsdoc/check-indentation': 'warn',
         'jsdoc/check-tag-names': [
           'warn',
@@ -85,10 +92,18 @@ export function jsdoc(level, reactive, jsdocTags) {
           'warn',
           {
             publicOnly: true,
+            contexts: [
+              'TSTypeAliasDeclaration',
+              'TSEnumDeclaration',
+              'TSInterfaceDeclaration',
+              'VariableDeclaration',
+              'PropertyDefinition[accessibility!="private"]',
+              'MethodDefinition[accessibility!="private"] > FunctionExpression',
+            ],
             require: {
               ClassDeclaration: true,
               FunctionDeclaration: true,
-              MethodDefinition: true,
+              MethodDefinition: false,
             },
             checkGetters: true,
             checkSetters: 'no-getter',
