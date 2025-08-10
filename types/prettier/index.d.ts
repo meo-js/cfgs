@@ -1,6 +1,16 @@
 /**
- * 基础配置.
+ * @typedef Options
  *
- * @type {import('prettier').Config}
+ * @property {boolean} [tailwindcss] 是否使用 Tailwind CSS，默认 `false`
  */
-export const config: import("prettier").Config;
+/**
+ * @param {Options} opts
+ * @returns {import('prettier').Config}
+ */
+export function config(opts: Options): import("prettier").Config;
+export type Options = {
+    /**
+     * 是否使用 Tailwind CSS，默认 `false`
+     */
+    tailwindcss?: boolean;
+};
