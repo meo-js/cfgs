@@ -1,7 +1,7 @@
 {
   "name": "@meojs/cfgs",
   "version": "2.0.24",
-  "packageManager": "npm@10.9.0",
+  "packageManager": "pnpm@10.14.0",
   "engines": {
     "node": ">=20"
   },
@@ -23,12 +23,28 @@
   "type": "module",
   "scripts": {
     "build": "rimraf ./types && npx tsc index.js --declaration --emitDeclarationOnly --allowJs --lib dom,esnext --skipLibCheck --outDir ./types",
-    "dev": "npm run build --watch",
-    "eslint:inspect": "npx @eslint/config-inspector --config eslint/test.js",
-    "prepack": "npm run build",
-    "publish:patch": "npm version patch && npm publish",
-    "publish:minor": "npm version minor && npm publish",
-    "publish:major": "npm version major && npm publish"
+    "dev": "pnpm run build --watch",
+    "eslint:inspect": "pnpx @eslint/config-inspector --config eslint/test.js",
+    "prepack": "pnpm run build",
+    "publish:patch": "pnpm version patch && pnpm publish",
+    "publish:minor": "pnpm version minor && pnpm publish",
+    "publish:major": "pnpm version major && pnpm publish"
+  },
+  "peerDependencies": {
+    "prettier-plugin-organize-imports": "^4.2.0",
+    "prettier-plugin-tailwindcss": "^0.6.14",
+    "typescript": "^5.8.3"
+  },
+  "peerDependenciesMeta": {
+    "prettier-plugin-organize-imports": {
+      "optional": true
+    },
+    "prettier-plugin-tailwindcss": {
+      "optional": true
+    },
+    "typescript": {
+      "optional": true
+    }
   },
   "dependencies": {
     "@eslint-community/eslint-plugin-eslint-comments": "^4.4.1",
@@ -36,10 +52,11 @@
     "@eslint/js": "^9.22.0",
     "@html-eslint/eslint-plugin": "^0.36.0",
     "@html-eslint/parser": "^0.36.0",
-    "eslint-plugin-jsdoc": "^50.6.8",
+    "eslint": "^9.22.0",
+    "eslint-plugin-jsdoc": "^52.0.4",
     "eslint-plugin-n": "^17.16.2",
     "eslint-plugin-security": "^3.0.1",
-    "prettier-plugin-jsdoc": "^1.3.3",
+    "prettier": "^3.5.3",
     "typescript-eslint": "^8.26.1"
   },
   "devDependencies": {

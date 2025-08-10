@@ -92,8 +92,8 @@ To get started contributing to the project, see the [Contributing Guide](./CONTR
 
 ## Contributing
 
-- Run `npm run build` to build the project.
-- Run `npm run publish:version` to build and push a new version.
+- Run `pnpm run build` to build the project.
+- Run `pnpm run publish:version` to build and push a new version.
 
 ## License
 

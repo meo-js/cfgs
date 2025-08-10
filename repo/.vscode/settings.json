@@ -1,28 +1,32 @@
 {
-    "[javascript][typescript][javascriptreact][typescriptreact]": {
-        "editor.formatOnSave": true,
-        "editor.codeActionsOnSave": {
-            "source.fixAll": "explicit",
-            "source.organizeImports": "explicit",
-        },
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnPaste": true,
-        "editor.formatOnType": true,
+  "[javascript][typescript][javascriptreact][typescriptreact]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit"
     },
-    "[css][scss][less]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json][jsonc][jsonl][snippets][yaml]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit"
     },
-    "[html]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html][css][scss][less]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit"
     },
-    "[markdown][mdx]": {
-        "editor.formatOnSave": true,
-        "editor.codeActionsOnSave": {
-            "source.fixAll": "explicit",
-            "source.organizeImports": "explicit",
-        },
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnPaste": true,
-        "editor.formatOnType": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[vue]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit"
     },
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown][mdx]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit"
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
