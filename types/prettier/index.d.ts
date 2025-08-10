@@ -1,5 +1,5 @@
 /**
- * 基础配置
+ * 基础配置.
  *
  * @type {import('prettier').Config}
  */
