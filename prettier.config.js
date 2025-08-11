@@ -1,3 +1,3 @@
 import { prettier } from './index.js';
 
-export default prettier.config;
+export default prettier.config();

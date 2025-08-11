@@ -1,14 +1,16 @@
 /**
- * @type {import('stylelint').Config}
+ * @returns {import('stylelint').Config}
  */
-export default {
-  extends: [
-    'stylelint-config-standard',
-    'stylelint-config-recess-order',
-    'stylelint-config-html',
-  ],
-  reportDescriptionlessDisables: true,
-  reportInvalidScopeDisables: true,
-  reportNeedlessDisables: true,
-  reportUnscopedDisables: true,
-};
+export function config() {
+  return {
+    extends: [
+      'stylelint-config-standard',
+      'stylelint-config-recess-order',
+      'stylelint-config-html',
+    ],
+    reportDescriptionlessDisables: true,
+    reportInvalidScopeDisables: true,
+    reportNeedlessDisables: true,
+    reportUnscopedDisables: true,
+  };
+}
