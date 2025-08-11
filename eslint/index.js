@@ -2,6 +2,8 @@
 /** @import { ConfigArray } from "typescript-eslint" */
 import comments from '@eslint-community/eslint-plugin-eslint-comments/configs';
 import js from '@eslint/js';
+import depend, { configs as dependConfigs } from 'eslint-plugin-depend';
+import jsoncParser from 'jsonc-eslint-parser';
 import { resolve } from 'path';
 import { cwd } from 'process';
 import {
@@ -22,8 +24,9 @@ import { web as webCfg } from './web.js';
  * @property {"none" | "loose" | "strict"} [jsdoc] JSDoc 检查级别，默认 `loose`
  * @property {"none" | "loose" | "strict"} [nodejs] 包括 NodeJS 相关规则，默认 `strict`
  * @property {boolean} [web] 包括 Web 相关规则，默认 `true`
- * @property {string[]} [jsdocTags] 额外允许的 JSDoc 标签
  * @property {boolean} [reactive] 是否兼容响应式库，默认 `true`
+ * @property {string[]} [jsdocTags] 额外允许的 JSDoc 标签
+ * @property {string[]} [allowedDeps] 额外允许的依赖
  */
 
 /**
@@ -37,8 +40,9 @@ export function config(opts = {}) {
     jsdoc = 'loose',
     nodejs = 'strict',
     web = true,
-    jsdocTags = [],
     reactive = true,
+    jsdocTags = [],
+    allowedDeps = [],
   } = opts;
 
   const allScriptFiles = defineConfig({
@@ -265,6 +269,33 @@ export function config(opts = {}) {
     },
   });
 
+  const dependConfig = defineConfig(
+    {
+      name: 'depend/recommended',
+      ...dependConfigs['flat/recommended'],
+    },
+    {
+      name: 'depend/package-json',
+      files: ['package.json'],
+      languageOptions: {
+        parser: jsoncParser,
+      },
+      plugins: { depend },
+    },
+    {
+      name: 'custom depend rules',
+      rules: {
+        'depend/ban-dependencies': [
+          'error',
+          {
+            'modules': [],
+            'allowed': allowedDeps.concat([]),
+          },
+        ],
+      },
+    },
+  );
+
   return defineConfig(
     ...allScriptFiles,
     ...baseOptions,
@@ -279,6 +310,7 @@ export function config(opts = {}) {
     // @ts-ignore
     comments.recommended,
     ...customRules,
+    ...dependConfig,
     ...jsdocCfg(jsdoc, reactive, jsdocTags),
     ...nodejsCfg(nodejs),
     ...webCfg(web),
