@@ -6,8 +6,9 @@
  * @property {"none" | "loose" | "strict"} [jsdoc] JSDoc 检查级别，默认 `loose`
  * @property {"none" | "loose" | "strict"} [nodejs] 包括 NodeJS 相关规则，默认 `strict`
  * @property {boolean} [web] 包括 Web 相关规则，默认 `true`
- * @property {string[]} [jsdocTags] 额外允许的 JSDoc 标签
  * @property {boolean} [reactive] 是否兼容响应式库，默认 `true`
+ * @property {string[]} [jsdocTags] 额外允许的 JSDoc 标签
+ * @property {string[]} [allowedDeps] 额外允许的依赖
  */
 /**
  * @param {Options} opts
@@ -36,12 +37,16 @@ export type Options = {
      */
     web?: boolean;
     /**
+     * 是否兼容响应式库，默认 `true`
+     */
+    reactive?: boolean;
+    /**
      * 额外允许的 JSDoc 标签
      */
     jsdocTags?: string[];
     /**
-     * 是否兼容响应式库，默认 `true`
+     * 额外允许的依赖
      */
-    reactive?: boolean;
+    allowedDeps?: string[];
 };
 import type { ConfigArray } from "typescript-eslint";

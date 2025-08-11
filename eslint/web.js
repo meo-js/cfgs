@@ -1,5 +1,6 @@
 /** @import { ConfigArray } from "typescript-eslint" */
 import html from '@html-eslint/eslint-plugin';
+import jsInHtml from 'eslint-plugin-html';
 import { defineConfig } from 'eslint/config';
 
 /**
@@ -15,10 +16,52 @@ export function web(enable) {
     return [];
   }
 
-  return defineConfig({
-    name: 'web recommended rules',
-    files: ['**/*.html'],
-    // @ts-expect-error 误报没有该配置
-    ...html.configs['flat/recommended'],
-  });
+  return defineConfig(
+    {
+      name: 'lint script in html',
+      files: ['**/*.html'],
+      plugins: { jsInHtml },
+    },
+    {
+      name: 'html recommended rules',
+      // From Docs: https://html-eslint.org/docs/getting-started#lint-html-in-javascript-template-literals
+      // files: ['**/*.html'],
+      ...html.configs['flat/recommended'],
+    },
+    {
+      name: 'custom html rules',
+      rules: {
+        '@html-eslint/no-duplicate-class': 'error',
+        '@html-eslint/no-duplicate-in-head': 'error',
+        '@html-eslint/no-invalid-entity': 'error',
+        '@html-eslint/no-nested-interactive': 'error',
+        '@html-eslint/no-script-style-type': 'error',
+        '@html-eslint/require-button-type': 'error',
+        '@html-eslint/require-explicit-size': 'error',
+        '@html-eslint/require-meta-charset': 'error',
+        '@html-eslint/no-abstract-roles': 'error',
+        '@html-eslint/no-accesskey-attrs': 'error',
+        '@html-eslint/no-aria-hidden-body': 'error',
+        '@html-eslint/no-aria-hidden-on-focusable': 'error',
+        '@html-eslint/no-empty-headings': 'error',
+        '@html-eslint/no-heading-inside-button': 'error',
+        '@html-eslint/no-invalid-role': 'error',
+        '@html-eslint/require-form-method': 'error',
+        '@html-eslint/require-frame-title': 'error',
+        '@html-eslint/require-input-label': 'error',
+        '@html-eslint/require-meta-viewport': 'error',
+        '@html-eslint/attrs-newline': 'off',
+        '@html-eslint/element-newline': 'off',
+        '@html-eslint/id-naming-convention': 'off',
+        '@html-eslint/indent': 'off',
+        '@html-eslint/lowercase': 'off',
+        '@html-eslint/no-extra-spacing-attrs': 'off',
+        '@html-eslint/no-extra-spacing-text': 'off',
+        '@html-eslint/no-multiple-empty-lines': 'off',
+        '@html-eslint/no-trailing-spaces': 'off',
+        '@html-eslint/quotes': 'off',
+        '@html-eslint/sort-attrs': 'off',
+      },
+    },
+  );
 }
