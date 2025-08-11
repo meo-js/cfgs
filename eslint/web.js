@@ -2,6 +2,7 @@
 import html from '@html-eslint/eslint-plugin';
 import jsInHtml from 'eslint-plugin-html';
 import { defineConfig } from 'eslint/config';
+import { htmlExt } from '../glob.js';
 
 /**
  * 针对 Web 的配置
@@ -19,7 +20,7 @@ export function web(enable) {
   return defineConfig(
     {
       name: 'lint script in html',
-      files: ['**/*.html'],
+      files: [`**/*.${htmlExt}`],
       plugins: { jsInHtml },
     },
     {

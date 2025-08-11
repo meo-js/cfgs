@@ -17,6 +17,24 @@ export const javascriptExt: string;
  */
 export const typescriptExt: string;
 /**
+ * CSS 文件扩展名
+ *
+ * @type {string}
+ */
+export const cssExt: string;
+/**
+ * HTML 文件扩展名
+ *
+ * @type {string}
+ */
+export const htmlExt: string;
+/**
+ * Vue 文件扩展名
+ *
+ * @type {string}
+ */
+export const vueExt: string;
+/**
  * 测试脚本文件名后缀
  *
  * @type {string}

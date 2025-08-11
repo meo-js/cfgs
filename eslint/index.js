@@ -10,7 +10,7 @@ import {
   config as defineConfig,
   configs as tsConfigs,
 } from 'typescript-eslint';
-import { scriptExt } from './glob.js';
+import { scriptExt } from '../glob.js';
 import { ignore } from './ignore-utils.js';
 import { jsdoc as jsdocCfg } from './jsdoc.js';
 import { nodejs as nodejsCfg } from './nodejs.js';

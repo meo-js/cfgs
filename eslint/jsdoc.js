@@ -1,7 +1,7 @@
 /** @import { ConfigArray } from "typescript-eslint" */
 import jsDoc from 'eslint-plugin-jsdoc';
 import { defineConfig } from 'eslint/config';
-import { javascriptExt, scriptExt, typescriptExt } from './glob.js';
+import { javascriptExt, scriptExt, typescriptExt } from '../glob.js';
 import jsdocTagSequence from './jsdoc-tag-sequence.js';
 
 /**

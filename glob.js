@@ -20,6 +20,27 @@ export const javascriptExt = `{js?(x),mjs?(x),cjs?(x)}`;
 export const typescriptExt = `{ts?(x),mts?(x),cts?(x)}`;
 
 /**
+ * CSS 文件扩展名
+ *
+ * @type {string}
+ */
+export const cssExt = `{css,scss,sass,less,pcss}`;
+
+/**
+ * HTML 文件扩展名
+ *
+ * @type {string}
+ */
+export const htmlExt = `{htm,html}`;
+
+/**
+ * Vue 文件扩展名
+ *
+ * @type {string}
+ */
+export const vueExt = `{vue}`;
+
+/**
  * 测试脚本文件名后缀
  *
  * @type {string}
