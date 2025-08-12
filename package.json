@@ -21,6 +21,12 @@
   "main": "index.js",
   "types": "./types/index.d.ts",
   "type": "module",
+  "exports": {
+    ".": {
+      "types": "./types/index.d.ts",
+      "import": "./index.js"
+    }
+  },
   "scripts": {
     "build": "rimraf ./types && npx tsc index.js --declaration --emitDeclarationOnly --allowJs --lib dom,esnext --skipLibCheck --outDir ./types",
     "dev": "pnpm run build --watch",
