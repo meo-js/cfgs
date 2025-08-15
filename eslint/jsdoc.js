@@ -18,8 +18,9 @@ export function jsdoc(level, reactive, jsdocTags) {
   const definedTags = jsdocTags.concat(
     reactive ? ['val', 'reactive', 'shallow', 'computed'] : [],
     ['experimental', 'decorator'],
-    ['modulePath', 'moduleTag', 'tag'],
+    ['bin', 'modulePath', 'moduleTag', 'tag'],
     ['group', 'groupDescription'],
+    ['platform'],
     ['__NO_SIDE_EFFECTS__', '__PURE__'],
   );
 

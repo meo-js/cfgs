@@ -20,18 +20,20 @@ export default [
   // Meta
   {
     tags: [
+      'inheritdoc',
       'reactive',
       'shallow',
       'val',
       'decorator',
+      'bin',
       'public',
       'internal',
       'experimental',
-      'deprecated',
       'module',
       'group',
       'groupDescription',
-      'inheritDoc',
+      'platform',
+      'deprecated',
       'since',
       'see',
     ],
