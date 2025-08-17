@@ -6,6 +6,7 @@
  * @property {"none" | "loose" | "strict"} [jsdoc] JSDoc 检查级别，默认 `loose`
  * @property {"none" | "loose" | "strict"} [nodejs] 包括 NodeJS 相关规则，默认 `strict`
  * @property {boolean} [web] 包括 Web 相关规则，默认 `true`
+ * @property {boolean} [test] 包括测试相关规则，默认 `true`
  * @property {boolean} [reactive] 是否兼容响应式库，默认 `true`
  * @property {string[]} [jsdocTags] 额外允许的 JSDoc 标签
  * @property {string[]} [allowedDeps] 额外允许的依赖
@@ -36,6 +37,10 @@ export type Options = {
      * 包括 Web 相关规则，默认 `true`
      */
     web?: boolean;
+    /**
+     * 包括测试相关规则，默认 `true`
+     */
+    test?: boolean;
     /**
      * 是否兼容响应式库，默认 `true`
      */
