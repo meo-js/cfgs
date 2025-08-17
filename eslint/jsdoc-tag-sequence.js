@@ -28,6 +28,7 @@ export default [
       'bin',
       'public',
       'internal',
+      'inherit',
       'experimental',
       'module',
       'group',

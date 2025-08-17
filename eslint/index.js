@@ -14,6 +14,7 @@ import { scriptExt } from '../glob.js';
 import { ignore } from './ignore-utils.js';
 import { jsdoc as jsdocCfg } from './jsdoc.js';
 import { nodejs as nodejsCfg } from './nodejs.js';
+import { test as testCfg } from './test.js';
 import { web as webCfg } from './web.js';
 
 /**
@@ -24,6 +25,7 @@ import { web as webCfg } from './web.js';
  * @property {"none" | "loose" | "strict"} [jsdoc] JSDoc 检查级别，默认 `loose`
  * @property {"none" | "loose" | "strict"} [nodejs] 包括 NodeJS 相关规则，默认 `strict`
  * @property {boolean} [web] 包括 Web 相关规则，默认 `true`
+ * @property {boolean} [test] 包括测试相关规则，默认 `true`
  * @property {boolean} [reactive] 是否兼容响应式库，默认 `true`
  * @property {string[]} [jsdocTags] 额外允许的 JSDoc 标签
  * @property {string[]} [allowedDeps] 额外允许的依赖
@@ -39,6 +41,7 @@ export function config(opts = {}) {
     ignoreConfigFiles = true,
     jsdoc = 'loose',
     nodejs = 'strict',
+    test = true,
     web = true,
     reactive = true,
     jsdocTags = [],
@@ -313,6 +316,7 @@ export function config(opts = {}) {
     ...dependConfig,
     ...jsdocCfg(jsdoc, reactive, jsdocTags),
     ...nodejsCfg(nodejs),
+    ...testCfg(test),
     ...webCfg(web),
   );
 }

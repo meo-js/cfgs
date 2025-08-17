@@ -24,7 +24,7 @@
   "scripts": {
     "build": "rimraf ./types && npx tsc index.js --declaration --emitDeclarationOnly --allowJs --lib dom,esnext --skipLibCheck --outDir ./types",
     "dev": "pnpm run build --watch",
-    "eslint:inspect": "pnpx @eslint/config-inspector --config eslint/test.js",
+    "eslint:inspect": "pnpx @eslint/config-inspector --config ./eslint.test.js",
     "prepack": "pnpm run build",
     "publish:patch": "pnpm version patch && pnpm publish",
     "publish:minor": "pnpm version minor && pnpm publish",
@@ -78,6 +78,7 @@
     "eslint-plugin-jsdoc": "^52.0.4",
     "eslint-plugin-n": "^17.21.3",
     "eslint-plugin-security": "^3.0.1",
+    "@vitest/eslint-plugin": "^1.3.4",
     "jsonc-eslint-parser": "^2.4.0",
     "prettier": "^3.6.2",
     "stylelint": "^16.23.1",
