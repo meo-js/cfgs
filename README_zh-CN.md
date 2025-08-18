@@ -95,6 +95,12 @@ To get started contributing to the project, see the [Contributing Guide](./CONTR
 
 ## 贡献
 
+### 注意事项
+
+- 更新 `.editorconfig` 之后，需要同步更新 `@meojs/utc` 中的引用。
+
+### 构建与发布
+
 - 执行 `pnpm run build` 构建项目。
 - 执行 `pnpm run publish:version` 构建并推送新版本。
 

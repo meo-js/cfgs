@@ -95,6 +95,12 @@ To get started contributing to the project, see the [Contributing Guide](./CONTR
 
 ## Contributing
 
+### Points to Consider
+
+- After updating .editorconfig, the references in @meojs/utc need to be synchronized updated.
+
+### Build & Publish
+
 - Run `pnpm run build` to build the project.
 - Run `pnpm run publish:version` to build and push a new version.
 
