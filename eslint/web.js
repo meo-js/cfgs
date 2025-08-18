@@ -24,9 +24,14 @@ export function web(enable) {
       plugins: { jsInHtml },
     },
     {
+      name: 'lint html in script template literals',
+      plugins: {
+        '@html-eslint': html,
+      },
+    },
+    {
       name: 'html recommended rules',
-      // From Docs: https://html-eslint.org/docs/getting-started#lint-html-in-javascript-template-literals
-      // files: ['**/*.html'],
+      files: ['**/*.html'],
       ...html.configs['flat/recommended'],
     },
     {
