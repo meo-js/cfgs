@@ -9,7 +9,7 @@
  * @property {boolean} [test] 包括测试相关规则，默认 `true`
  * @property {boolean} [reactive] 是否兼容响应式库，默认 `true`
  * @property {string[]} [jsdocTags] 额外允许的 JSDoc 标签
- * @property {string[]} [allowedDeps] 额外允许的依赖
+ * @property {string[]} [allowedDeps] 忽略某些过时的依赖
  */
 /**
  * @param {Options} opts
@@ -50,7 +50,7 @@ export type Options = {
      */
     jsdocTags?: string[];
     /**
-     * 额外允许的依赖
+     * 忽略某些过时的依赖
      */
     allowedDeps?: string[];
 };
