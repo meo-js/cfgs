@@ -25,7 +25,7 @@
     "build": "rimraf ./types && npx tsc index.js --declaration --emitDeclarationOnly --allowJs --lib dom,esnext --skipLibCheck --outDir ./types",
     "dev": "pnpm run build --watch",
     "eslint:inspect": "pnpx @eslint/config-inspector --config ./eslint.test.js",
-    "prepack": "pnpm run build",
+    "prepublishOnly": "pnpm run build",
     "publish:patch": "pnpm version patch && pnpm publish",
     "publish:minor": "pnpm version minor && pnpm publish",
     "publish:major": "pnpm version major && pnpm publish"
