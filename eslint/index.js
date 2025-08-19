@@ -289,7 +289,7 @@ export function config(opts = {}) {
 
   const fixJsonWithTypeScript = defineConfig({
     name: 'fix the compatibility problem of json and typescript',
-    files: ['**/*.json', '**/*.jsonc'],
+    files: ['package.json'],
     extends: [tsConfigs.disableTypeChecked],
   });
 
