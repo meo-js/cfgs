@@ -71,12 +71,13 @@ export function jsdoc(level, reactive, jsdocTags) {
             definedTags,
           },
         ],
-        'jsdoc/check-param-names': [
-          'warn',
-          {
-            disableMissingParamChecks: true,
-          },
-        ],
+        // 重载函数误报
+        // 'jsdoc/check-param-names': [
+        //   'warn',
+        //   {
+        //     disableMissingParamChecks: true,
+        //   },
+        // ],
         'jsdoc/check-template-names': 'warn',
         'jsdoc/no-bad-blocks': [
           'warn',
