@@ -39,7 +39,12 @@ export function web(enable) {
     },
     {
       name: 'html recommended rules',
+      files: ['**/*.html'],
       ...html.configs['flat/recommended'],
+    },
+    {
+      name: 'html recommended rules for script',
+      ...html.configs['flat/recommended'].rules,
     },
     {
       name: 'custom html rules',

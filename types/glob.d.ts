@@ -11,6 +11,30 @@ export const scriptExt: string;
  */
 export const scriptExts: string[];
 /**
+ * 模块化脚本文件扩展名（module）
+ *
+ * @type {string}
+ */
+export const moduleScriptExt: string;
+/**
+ * 模块化脚本文件扩展名数组（module）
+ *
+ * @type {string[]}
+ */
+export const moduleScriptExts: string[];
+/**
+ * 通用脚本文件扩展名（common）
+ *
+ * @type {string}
+ */
+export const commonScriptExt: string;
+/**
+ * 通用脚本文件扩展名数组（common）
+ *
+ * @type {string[]}
+ */
+export const commonScriptExts: string[];
+/**
  * JS 脚本文件扩展名
  *
  * @type {string}
