@@ -1,6 +1,6 @@
 {
   "name": "@meojs/cfgs",
-  "version": "2.0.50",
+  "version": "2.0.51",
   "packageManager": "pnpm@10.14.0",
   "engines": {
     "node": ">=20"
