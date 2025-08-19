@@ -72,6 +72,7 @@ export function jsdoc(level, reactive, jsdocTags) {
           },
         ],
         // 重载函数误报
+        'jsdoc/check-param-names': 'off',
         // 'jsdoc/check-param-names': [
         //   'warn',
         //   {
