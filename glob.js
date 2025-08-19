@@ -26,6 +26,34 @@ export const scriptExts = [
 ];
 
 /**
+ * 模块化脚本文件扩展名（module）
+ *
+ * @type {string}
+ */
+export const moduleScriptExt = `{mjs?(x),mts?(x)}`;
+
+/**
+ * 模块化脚本文件扩展名数组（module）
+ *
+ * @type {string[]}
+ */
+export const moduleScriptExts = ['mjs', 'mjsx', 'mts', 'mtsx'];
+
+/**
+ * 通用脚本文件扩展名（common）
+ *
+ * @type {string}
+ */
+export const commonScriptExt = `{cjs?(x),cts?(x)}`;
+
+/**
+ * 通用脚本文件扩展名数组（common）
+ *
+ * @type {string[]}
+ */
+export const commonScriptExts = ['cjs', 'cjsx', 'cts', 'ctsx'];
+
+/**
  * JS 脚本文件扩展名
  *
  * @type {string}

@@ -10,7 +10,7 @@ import {
   config as defineConfig,
   configs as tsConfigs,
 } from 'typescript-eslint';
-import { scriptExt } from '../glob.js';
+import { commonScriptExt, scriptExt } from '../glob.js';
 import { ignore } from './ignore-utils.js';
 import { jsdoc as jsdocCfg } from './jsdoc.js';
 import { nodejs as nodejsCfg } from './nodejs.js';
@@ -51,6 +51,21 @@ export function config(opts = {}) {
   const allScriptFiles = defineConfig({
     name: 'all script files',
     files: [`**/*.${scriptExt}`],
+  });
+
+  const cjsBaseOptions = defineConfig({
+    name: 'cjs base options',
+    files: [`**/*.${commonScriptExt}`],
+    languageOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'commonjs',
+      parserOptions: {
+        projectService: true,
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+    },
   });
 
   const baseOptions = defineConfig({
@@ -272,6 +287,12 @@ export function config(opts = {}) {
     },
   });
 
+  const fixJsonWithTypeScript = defineConfig({
+    name: 'fix the compatibility problem of json and typescript',
+    files: ['**/*.json', '**/*.jsonc'],
+    extends: [tsConfigs.disableTypeChecked],
+  });
+
   const dependConfig = defineConfig(
     {
       name: 'depend/recommended',
@@ -302,6 +323,7 @@ export function config(opts = {}) {
   return defineConfig(
     ...allScriptFiles,
     ...baseOptions,
+    ...cjsBaseOptions,
     ...ignoreGitignore(),
     ...ignoreAllConfigFiles(),
     {
@@ -313,6 +335,7 @@ export function config(opts = {}) {
     // @ts-ignore
     comments.recommended,
     ...customRules,
+    ...fixJsonWithTypeScript,
     ...dependConfig,
     ...jsdocCfg(jsdoc, reactive, jsdocTags),
     ...nodejsCfg(nodejs),

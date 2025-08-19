@@ -1,7 +1,10 @@
 /** @import { ConfigArray } from "typescript-eslint" */
 import html from '@html-eslint/eslint-plugin';
 import jsInHtml from 'eslint-plugin-html';
-import { defineConfig } from 'eslint/config';
+import {
+  config as defineConfig,
+  configs as tsConfigs,
+} from 'typescript-eslint';
 import { htmlExt } from '../glob.js';
 
 /**
@@ -30,8 +33,12 @@ export function web(enable) {
       },
     },
     {
-      name: 'html recommended rules',
+      name: 'fix the compatibility problem of html and typescript',
       files: ['**/*.html'],
+      extends: [tsConfigs.disableTypeChecked],
+    },
+    {
+      name: 'html recommended rules',
       ...html.configs['flat/recommended'],
     },
     {
