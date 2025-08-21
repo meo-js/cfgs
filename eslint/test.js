@@ -35,19 +35,20 @@ export function test(enable) {
       name: 'custom test rules',
       files: [testFiles],
       rules: {
-        'vitest/consistent-test-filename': [
-          'error',
-          {
-            'allTestPattern': {
-              'format': 'regex',
-              'default': '.*\\.(test|spec)\\.(?:[mc])?[jt]sx?$',
-            },
-            'pattern': {
-              'format': 'regex',
-              'default': '.*\\.test\\.(?:[mc])?[jt]sx?$',
-            },
-          },
-        ],
+        // NOTE: 报错 o.test is not a function
+        // 'vitest/consistent-test-filename': [
+        //   'error',
+        //   {
+        //     'allTestPattern': {
+        //       'format': 'regex',
+        //       'default': '.*\\.(test|spec)\\.(?:[mc])?[jt]sx?$',
+        //     },
+        //     'pattern': {
+        //       'format': 'regex',
+        //       'default': '.*\\.test\\.(?:[mc])?[jt]sx?$',
+        //     },
+        //   },
+        // ],
         'vitest/consistent-test-it': 'error',
         'vitest/consistent-vitest-vi': 'error',
         'vitest/no-alias-methods': 'error',
