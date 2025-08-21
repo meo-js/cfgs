@@ -39,7 +39,7 @@ export function test(enable) {
           'error',
           {
             'allTestPattern': {
-              'format': '',
+              'format': 'regex',
               'default': '.*\\.(test|spec)\\.(?:[mc])?[jt]sx?$',
             },
             'pattern': {
