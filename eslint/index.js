@@ -313,7 +313,7 @@ export function config(opts = {}) {
           'error',
           {
             'modules': [],
-            'allowed': allowedDeps.concat([]),
+            'allowed': allowedDeps.concat(['glob']),
           },
         ],
       },
